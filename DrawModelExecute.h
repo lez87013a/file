@@ -75,7 +75,7 @@ IMaterial* GetCurrentZMaterial(int mati)
 void __fastcall hkDrawModelExecute(void* thisptr, int edx, void* ctx, void* state, const ModelRenderInfo_t &pInfo, matrix3x4_t *pCustomBoneToWorld)
 {
 	static bool DontDraw = false;
-	static auto ofunc = hooks::modelrender.GetOriginalFunction<dme_t>(21);
+	static auto ofunc = hooks::modelrender.original<dme_t>(21);
 
 	IMaterial* zmat = GetCurrentZMaterial(g_Options.Visuals.matierial);
 	IMaterial* mat = GetCurrentMaterial(g_Options.Visuals.matierial);
