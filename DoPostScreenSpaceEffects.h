@@ -1,7 +1,3 @@
-//if (strstr(glowEnt->getEnt()->GetClientClass()->m_pNetworkName, ("CWeapon")))
-#pragma once
-#include "HookIncludes.h"
-
 bool _fastcall hkDoPostScreenSpaceEffects(void* ecx, void* edx, CViewSetup* pSetup)
 {
 	static auto ofunc = hooks::clientmode.GetOriginalFunction<do_post_screen_space_effects_t>(44);
