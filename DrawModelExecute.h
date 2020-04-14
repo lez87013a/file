@@ -1,7 +1,3 @@
-﻿#pragma once
-#include "HookIncludes.h"
-#include <string>
-
 float flColor[3];
 float flVColor[3];
 
