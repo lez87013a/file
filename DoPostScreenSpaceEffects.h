@@ -1,6 +1,6 @@
 bool _fastcall hkDoPostScreenSpaceEffects(void* ecx, void* edx, CViewSetup* pSetup)
 {
-	static auto ofunc = hooks::clientmode.GetOriginalFunction<do_post_screen_space_effects_t>(44);
+	static auto ofunc = hooks::clientmode.original<do_post_screen_space_effects_t>(44);
 
 	IMaterial *pMatGlowColor = Interfaces::MaterialSystem()->FindMaterial("dev/glow_color", TEXTURE_GROUP_OTHER, true);
 	Interfaces::ModelRender()->ForcedMaterialOverride(pMatGlowColor);
