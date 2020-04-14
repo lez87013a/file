@@ -1,9 +1,6 @@
 //if (strstr(glowEnt->getEnt()->GetClientClass()->m_pNetworkName, ("CWeapon")))
 #pragma once
 #include "HookIncludes.h"
-#include "Entities.h"
-using do_post_screen_space_effects_t = bool(__thiscall*)(void*, CViewSetup*);
-
 
 bool _fastcall hkDoPostScreenSpaceEffects(void* ecx, void* edx, CViewSetup* pSetup)
 {
