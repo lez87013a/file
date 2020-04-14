@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "HookIncludes.h"
 #include <string>
-typedef void(__thiscall* dme_t)(void*, void*, void*, const ModelRenderInfo_t&, matrix3x4_t*);
 
 float flColor[3];
 float flVColor[3];
@@ -332,22 +331,15 @@ void __fastcall hkDrawModelExecute(void* thisptr, int edx, void* ctx, void* stat
 
 			}
 
-			if (Chamsweps == 3)
-			{
-				Color colorchamshands = Color(g_Options.Color.WeaponCham[0] * 255, g_Options.Color.WeaponCham[1] * 255, g_Options.Color.WeaponCham[2] * 255, g_Options.Color.WeaponCham[3] * 255);
-				ForceMaterial(colorchamshands, norm);
-				norm->SetMaterialVarFlag(MATERIAL_VAR_IGNOREZ, false);
-			}
 		}
 
 	}
 
 
 	if (!DontDraw)
-	{
 		ofunc(thisptr, ctx, state, pInfo, pCustomBoneToWorld);
 		Interfaces::ModelRender()->ForcedMaterialOverride(NULL);
 
-	}
+	
 
 }
